@@ -61,7 +61,7 @@ public class JwtFilter extends AuthenticatingFilter {
         String json = JSONUtil.toJsonStr(result);
 
         try {
-            httpServletResponse.getWriter().print(result);
+            httpServletResponse.getWriter().print(json);
         } catch (IOException e1) {
         }
         return false;
